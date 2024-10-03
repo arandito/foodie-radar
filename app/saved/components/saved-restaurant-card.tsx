@@ -11,7 +11,7 @@ interface RestaurantCardProps {
   restaurant: Restaurant;
 }
 
-export default function RestaurantCard({ restaurant }: RestaurantCardProps) {
+export default function SavedRestaurantCard({ restaurant }: RestaurantCardProps) {
   const getPriceLevelString = (priceLevel: number) => {
     if (priceLevel === 0) return "-"
     return '$'.repeat(priceLevel - 1)

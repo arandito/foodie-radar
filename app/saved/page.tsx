@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Restaurant } from '@/types';
 import { getSavedRestaurants } from '@/lib/api';
-import RestaurantCard from '@/app/saved/components/saved-restaurant-card';
+import SavedRestaurantCard from '@/app/saved/components/saved-restaurant-card';
 import Header from '@/components/header';
 import Background from '@/components/background';
 import Grid from '@/components/grid';
@@ -73,7 +73,7 @@ export default function SavedRestaurants() {
         </Alert> :
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {savedRestaurants.map((restaurant) => (
-            <RestaurantCard key={restaurant.id} restaurant={restaurant} />
+            <SavedRestaurantCard key={restaurant.id} restaurant={restaurant} />
           ))}
         </div>}
       </main>
