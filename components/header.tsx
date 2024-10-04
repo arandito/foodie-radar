@@ -45,7 +45,7 @@ const Header = ({ token }: HeaderProps) => {
         </div>
         <ThemeSwitcher />
         <div className="ml-2 mr-2">
-          <Link href="https://github.com/arandito" target="_blank">
+          <Link href="https://github.com/arandito/foodie-radar" target="_blank">
             <Icons.gitHub className="h-5 w-5 text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" />
           </Link>
         </div>

@@ -134,14 +134,14 @@ export default function ExplorePage() {
           </div>
           {renderStep()}
           <div className="flex justify-between mt-8 md:mx-8 mb-8">
-            <Button
+            {step > 1 ? (<Button
               onClick={prevStep}
               disabled={step === 1}
               variant="outline"
             >
               <ChevronLeft className='-ml-3 mr-1 h-5 w-5' />
               Previous
-            </Button>
+            </Button>) : <div></div>}
             {step === 1 ? (
               <Button
                 onClick={nextStep}
