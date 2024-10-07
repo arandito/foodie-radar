@@ -38,8 +38,8 @@ export default function Home() {
             Skip the back-and-forth. Tell us what you like, and we&apos;ll find the perfect spot for you in seconds.
           </p>
           <div className="flex flex-row py-5 mb-2 gap-4 justify-center md:justify-start">
-            <Button size="lg" className='w-1/4 md:w-1/6' onClick={handleTryIt}>Try it</Button>
-            <Button size="lg" className='w-1/4 md:w-1/6' onClick={handleSignUp} variant="outline">Sign up</Button>
+            <Button size="lg" className='w-1/4 md:w-1/5' onClick={handleTryIt}>Try it</Button>
+            <Button size="lg" className='w-1/4 md:w-1/5' onClick={handleSignUp} variant="outline">Sign up</Button>
           </div>
         </div>
         <div className="w-full md:w-1/2">
