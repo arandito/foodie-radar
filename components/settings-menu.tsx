@@ -20,7 +20,7 @@ const SettingsMenu: React.FC<SettingsMenuProps> = ({ token, onLogout }) => {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <button className="pl-2 py-2 focus:outline-none">
-          <Settings className="h-5 w-5 text-gray-400 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300" />
+          <Settings className="h-5 w-5 hover:text-gray-400 dark:hover:text-gray-500" />
           </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

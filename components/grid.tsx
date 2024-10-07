@@ -22,7 +22,7 @@ const Grid = () => {
             <rect width="100%" height="100%" fill="url(#fade)" />
           </mask>
           <pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse">
-            <path d="M100 0H0V100" fill="none" stroke={isDarkMode ? "rgba(255,255,255,0.01)" : "rgba(0,0,0,0.05)"} strokeWidth="1.5" />
+            <path d="M100 0H0V100" fill="none" stroke={isDarkMode ? "rgba(255,255,255,0.01)" : "rgba(0,0,0,0.03)"} strokeWidth="1.5" />
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill="url(#grid)" mask="url(#fadeMask)" />

@@ -18,7 +18,7 @@ const Background = () => {
   return (
     <>
       <div
-        className="fixed inset-0 z-[-1] bg-fixed bg-top bg-no-repeat bg-cover transition-opacity duration-300"
+        className="absolute inset-0 z-[-1] bg-top bg-no-repeat bg-cover transition-opacity duration-300"
         style={{
           backgroundImage: `url('/backgrounds/background-${isDarkMode ? 'dark' : 'light'}.png')`,
         }}

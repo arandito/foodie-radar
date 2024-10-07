@@ -32,9 +32,9 @@ export const ThemeSwitcher = () => {
       <DropdownMenuTrigger asChild>
         <button className="p-2 focus:outline-none">
           {currentTheme === 'dark' ? (
-            <MoonStar className="h-5 w-5 text-pink-600" />
+            <MoonStar className="h-5 w-5 text-pink-600 hover:text-foreground" />
           ) : (
-            <Sun className="h-5 w-5 text-pink-600" />
+            <Sun className="h-5 w-5 text-pink-600 hover:text-foreground" />
           )}
           <span className="sr-only">Toggle theme</span>
         </button>

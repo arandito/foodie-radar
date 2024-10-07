@@ -25,7 +25,7 @@ export default function StaticRestaurantCard({ restaurant, index }: StaticRestau
   }
 
   return (
-    <Card className="max-w-[330px] md:max-w-[430px] h-full bg-background/50 dark:bg-background/50 overflow-hidden flex flex-col">
+    <Card className="max-w-[330px] md:max-w-[430px] h-[600px] md:h-[525px] bg-background/50 dark:bg-background/20 overflow-hidden flex flex-col">
       {restaurant.photo && (
         <div className="relative w-full min-h-48">
           <Image

@@ -8,7 +8,7 @@ const interLocal = localFont({
 });
 
 export const metadata = {
-  title: 'foodie radar',
+  title: 'Foodie Radar',
   description: 'An app to find your next favorite restaurant.',
   icons: {
     icon: '/favicon.ico',
