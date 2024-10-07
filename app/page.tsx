@@ -42,7 +42,7 @@ export default function Home() {
             <Button size="lg" className='w-1/4 md:w-1/5' onClick={handleSignUp} variant="outline">Sign up</Button>
           </div>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 pb-7 md:pb-0">
           <RestaurantCarousel restaurants={homePageRestaurants} />
         </div>
       </main>
