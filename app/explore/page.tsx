@@ -2,22 +2,22 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from "@/components/ui/button";
+import { motion } from 'framer-motion';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Grid from '@/components/grid';
-import Background from '@/components/background';
 import GoogleProvider from '@/app/explore/components/google-provider';
 import LocationSelector from '@/app/explore/components/location-selector';
 import CuisineSelector from '@/app/explore/components/cuisine-selector';
 import { RecommendationRequest, Restaurant } from '@/types';
 import { Separator } from '@/components/ui/separator';
 import Stepper from '@/app/explore/components/stepper';
-import { ChevronRight, ChevronLeft, RefreshCw } from 'lucide-react';
+import { ChevronRight, ChevronLeft, RefreshCw, Home } from 'lucide-react';
 import { getRecommendations, getRecommendationsNoAuth } from '@/lib/api';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import RestaurantDisplay from '@/components/restaurant-display';
-
+import LoadingPage from '@/components/loading'; 
 
 export default function ExplorePage() {
   const router = useRouter();
@@ -53,17 +53,16 @@ export default function ExplorePage() {
     const requestBody: RecommendationRequest = {
       lat: location.lat,
       lng: location.lng,
-      radius: radius * 1000, 
+      radius: radius * 1000,
       primaryTypes: selectedCuisines
     };
     try {
       var results = [];
-      if (token){
+      if (token) {
         results = await getRecommendations(requestBody);
       } else {
         results = await getRecommendationsNoAuth(requestBody);
       }
-      //console.log(results)
       setRecommendations(results);
       nextStep();
     } catch (err) {
@@ -91,6 +90,14 @@ export default function ExplorePage() {
     }
   };
 
+  const handleRestart = () => {
+    window.location.reload();
+  };
+
+  const handleReturnHome = () => {
+    router.push("/");
+  };
+
   const renderStep = () => {
     switch (step) {
       case 1:
@@ -109,64 +116,83 @@ export default function ExplorePage() {
           </GoogleProvider>
         );
       case 3:
-        return (
-          <RestaurantDisplay recommendations={recommendations} token={token}/>
+        return isLoading ? (
+          <LoadingPage />
+        ) : (
+          <RestaurantDisplay recommendations={recommendations} token={token} />
         );
       default:
         return null;
     }
   };
 
-  const handleRestart = () => {
-    window.location.reload();
+  const stepVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+    exit: { opacity: 0, x: 50, transition: { duration: 1.5 } }
   };
 
   return (
     <>
       <div className="flex flex-col min-h-screen py-2">
-        <Background />
         <Grid />
         <Header token={token} />
         <Separator className='mt-1 bg-gray-200 dark:bg-gray-700' />
         <main className="flex-grow mx-auto px-4 md:px-6 w-full">
-          <div className='flex justify-center py-6 px-2 w-full mb-6'>
+          <motion.div
+            className='flex justify-center py-6 px-2 w-full mb-6'
+            initial="hidden"
+            animate="visible"
+            variants={stepVariants}
+          >
             <Stepper currentStep={step} totalSteps={3} />
-          </div>
-          {renderStep()}
-          <div className="flex justify-between mt-8 md:mx-8 mb-8">
-            {step > 1 ? (<Button
-              onClick={prevStep}
-              disabled={step === 1}
-              variant="outline"
-            >
-              <ChevronLeft className='-ml-3 mr-1 h-5 w-5' />
-              Previous
-            </Button>) : <div></div>}
+          </motion.div>
+
+          <motion.div
+            key={step}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={stepVariants}
+          >
+            {renderStep()}
+          </motion.div>
+
+          <motion.div
+            className="flex justify-between mt-8 md:mx-8 mb-8"
+            initial="hidden"
+            animate="visible"
+            variants={stepVariants}
+          >
             {step === 1 ? (
-              <Button
-                onClick={nextStep}
-                disabled={selectedCuisines.length === 0}
-              >
+              <Button onClick={handleReturnHome} variant="outline">
+                <Home className=' mr-2  h-4 w-4' />
+                Return Home
+              </Button>
+            ) : step > 1 ? (
+              <Button onClick={prevStep} disabled={step === 1} variant="outline">
+                <ChevronLeft className='-ml-3 mr-1 h-5 w-5' />
+                Previous
+              </Button>
+            ) : <div></div>}
+
+            {step === 1 ? (
+              <Button onClick={nextStep} disabled={selectedCuisines.length === 0}>
                 Continue
                 <ChevronRight className='ml-1 -mr-2 h-5 w-5' />
               </Button>
             ) : step === 2 ? (
-              <Button
-                onClick={handleSubmit}
-                disabled={radius === 0 || !location || isLoading}
-              >
+              <Button onClick={handleSubmit} disabled={radius === 0 || !location || isLoading}>
                 {isLoading ? 'Loading...' : 'Get Recommendations'}
                 <ChevronRight className='ml-1 -mr-2 h-5 w-5' />
               </Button>
             ) : (
-              <Button
-                onClick={handleRestart}
-              >
+              <Button onClick={handleRestart}>
                 Restart
                 <RefreshCw className='ml-2 h-4 w-4' />
               </Button>
             )}
-          </div>
+          </motion.div>
         </main>
       </div>
       <Footer />
