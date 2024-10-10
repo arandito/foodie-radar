@@ -12,7 +12,7 @@ export const cuisineOptionsDict: Record<string, CuisineOption> = {
   mexican_restaurant: { name: 'Mexican', bgColor: 'bg-orange-500' },
   japanese_restaurant: { name: 'Japanese', bgColor: 'bg-purple-500' },
   pizza_restaurant: { name: 'Pizza', bgColor: 'bg-red-600' },
-  cafe: { name: 'Cafe', bgColor: 'bg-brown-500' },
+  cafe: { name: 'Cafe', bgColor: 'bg-brown-900' },
   korean_restaurant: { name: 'Korean', bgColor: 'bg-blue-500' },
   ramen_restaurant: { name: 'Ramen', bgColor: 'bg-pink-500' },
   bar: { name: 'Bar', bgColor: 'bg-gray-700' },
