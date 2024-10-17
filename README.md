@@ -43,7 +43,7 @@ Foodie Radar UI is a modern, responsive web application to help you choose where
 First, clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/foodie-radar.git
+git clone https://github.com/arandito/foodie-radar.git
 cd foodie-radar
 ```
 
