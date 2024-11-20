@@ -12,23 +12,23 @@ Foodie Radar UI is a modern, responsive web application to help you choose where
 
 ## Screenshots
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antonioaranda.dev/images/foodie-radar/home.png" alt="Homepage Dark" width="48%">
-  <img src="https://antonioaranda.dev/images/foodie-radar/home-light.png" alt="Homepage Light" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/home.png" alt="Homepage Dark" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/home-light.png" alt="Homepage Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antonioaranda.dev/images/foodie-radar/explore.png" alt="Explore Dark" width="48%">
-  <img src="https://antonioaranda.dev/images/foodie-radar/explore-light.png" alt="Explore Light" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/explore.png" alt="Explore Dark" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/explore-light.png" alt="Explore Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antonioaranda.dev/images/foodie-radar/location.png" alt="Location Dark" width="48%">
-  <img src="https://antonioaranda.dev/images/foodie-radar/location-light.png" alt="Location Light" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/location.png" alt="Location Dark" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/location-light.png" alt="Location Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antonioaranda.dev/images/foodie-radar/recs.png" alt="Recs Dark" width="48%">
-  <img src="https://antonioaranda.dev/images/foodie-radar/recs-light.png" alt="Recs Light" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/recs.png" alt="Recs Dark" width="48%">
+  <img src="https://antoara.com/images/foodie-radar/recs-light.png" alt="Recs Light" width="48%">
 </div>
 
 ## Tech Stack
