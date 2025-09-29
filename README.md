@@ -1,4 +1,4 @@
-# Foodie Radar UI <img src="https://antonioaranda.dev/images/foodie-radar/icon.png" width="30" alt="App Icon" style="vertical-align: bottom;">
+# Foodie Radar UI <img src="https://antoara.com/images/foodie-radar/icon.png" width="30" alt="App Icon" style="vertical-align: bottom;">
 
 Foodie Radar UI is a modern, responsive web application to help you choose where to eat next. Built with Next.js, React, TypeScript, and Tailwind CSS, this project offers a sleek and intuitive interface for exploring restaurants and culinary hotspots.
 
