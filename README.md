@@ -1,4 +1,4 @@
-# Foodie Radar UI <img src="https://antoara.com/images/foodie-radar/icon.png" width="30" alt="App Icon" style="vertical-align: bottom;">
+# Foodie Radar UI <img src="https://aranda.xyz/images/foodie-radar/icon.png" width="30" alt="App Icon" style="vertical-align: bottom;">
 
 Foodie Radar UI is a modern, responsive web application to help you choose where to eat next. Built with Next.js, React, TypeScript, and Tailwind CSS, this project offers a sleek and intuitive interface for exploring restaurants and culinary hotspots.
 
@@ -12,23 +12,23 @@ Foodie Radar UI is a modern, responsive web application to help you choose where
 
 ## Screenshots
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antoara.com/images/foodie-radar/home.png" alt="Homepage Dark" width="48%">
-  <img src="https://antoara.com/images/foodie-radar/home-light.png" alt="Homepage Light" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/home.png" alt="Homepage Dark" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/home-light.png" alt="Homepage Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antoara.com/images/foodie-radar/explore.png" alt="Explore Dark" width="48%">
-  <img src="https://antoara.com/images/foodie-radar/explore-light.png" alt="Explore Light" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/explore.png" alt="Explore Dark" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/explore-light.png" alt="Explore Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antoara.com/images/foodie-radar/location.png" alt="Location Dark" width="48%">
-  <img src="https://antoara.com/images/foodie-radar/location-light.png" alt="Location Light" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/location.png" alt="Location Dark" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/location-light.png" alt="Location Light" width="48%">
 </div>
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="https://antoara.com/images/foodie-radar/recs.png" alt="Recs Dark" width="48%">
-  <img src="https://antoara.com/images/foodie-radar/recs-light.png" alt="Recs Light" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/recs.png" alt="Recs Dark" width="48%">
+  <img src="https://aranda.xyz/images/foodie-radar/recs-light.png" alt="Recs Light" width="48%">
 </div>
 
 ## Tech Stack
